@@ -9,8 +9,18 @@ const router = express.Router();
 const products = [];
 
 
+// router.get('/add-product', (req, res, next) => {
+//     res.render('add-product', { docTitle: 'Add Product', path: '/admin/add-product' });
+// });
+
+//To use handlebars,
 router.get('/add-product', (req, res, next) => {
-    res.render('add-product', { docTitle: 'Add Product' });
+    res.render('add-product', {
+        docTitle: 'Add Product',
+        path: '/admin/add-product',
+        formsCSS: true,
+        activeAddProduct: true
+    });
 });
 
 router.post('/add-product', (req, res, next) => {
