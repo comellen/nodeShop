@@ -11,7 +11,7 @@ exports.postAddProduct = (req, res, next) => {
 };
 
 exports.getProducts = (req, res, next) => {
-    Product.fetchAll((products) => {
+    Product.fetchAll(products => {
         res.render('shop', {
             products: products,
             docTitle: 'Shop',
