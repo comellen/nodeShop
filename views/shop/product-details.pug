@@ -1,4 +1,4 @@
-extends ../layouts/main-layout.pug
+extends ../includes/main-layout.pug
 
 block styles
     link(rel="stylesheet", href="/css/product.css")
@@ -14,6 +14,4 @@ block content
             //- img(src="#{product.imgUrl}" alt="#{product.title}")
         h2 $#{product.price}
         p #{product.description}
-        form(action="/cart" method="POST") 
-            button(type="submit").btn Add to Cart
-            input(type="hidden" name="productId" value=productId)
+        include ../includes/add-to-cart.pug
