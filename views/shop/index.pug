@@ -8,8 +8,8 @@ block content
         if products.length > 0
             .grid
                 each product in products
-                -const productId = product.id;
-                -const productTitle = product.title;
+                    -const productId = product.id;
+                    -const productTitle = product.title;
                     article.card.product-item
                         header.card__header
                             h1.product__title #{product.title}

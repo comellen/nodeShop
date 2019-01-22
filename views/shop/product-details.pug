@@ -4,6 +4,8 @@ block styles
     link(rel="stylesheet", href="/css/product.css")
 
 block content
+    -const productId = product.id;
+    -const productTitle = product.title;
     main.centered
         h1 #{product.title}
         hr
