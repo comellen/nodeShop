@@ -1,0 +1,14 @@
+form.product-form(action="/admin/edit-product" method="POST")
+    .form-control
+        label(for="title") Title
+        input(type="text" name="title" value=product.title)#title
+    .form-control
+        label(for="imgUrl") Image URL
+        input(type="text" name="imgUrl" value=product.imgUrl)#imgUrl
+    .form-control
+        label(for="price") Price
+        input(type="number" name="price" step="0.01" value=product.price)#price
+    .form-control
+        label(for="description") Description
+        textarea(name="description" rows="5" value=product.description)#description
+        button.btn(type="submit") Update Product

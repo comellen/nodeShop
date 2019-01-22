@@ -8,18 +8,16 @@ block content
         if products.length > 0
             .grid
                 each product in products
-                    -const productId = product.id;
-                    -const productTitle = product.title;
                     article.card.product-item
                         header.card__header
                             h1.product__title #{product.title}
                         .card__image
-                            img(src="/assets/mysterybox.png", alt=productTitle + " image")
+                            img(src="/assets/mysterybox.png", alt=product.title + " image")
                         .card__content
                             h2.product__price $#{product.price}
                             p.product__description #{product.description}
                         .card__actions
-                            a.btn(href='/products/' + productId) Details
+                            a.btn(href='/products/' + product.id) Details
                             include ../includes/add-to-cart.pug
         else
             h1 No Products
